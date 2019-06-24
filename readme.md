@@ -3,12 +3,15 @@
 ![Tic-Tac-Toe](img/main.jpg)
 
 ![Game Start](img/a.png)
+
 **You the Player plays as ‘X’, while the Computer plays as ‘O’.**
 
 ![Block](img/block.png)
+
 **Computer Blocks Opponents Move!**
 
 ![Win](img/win.png)
+
 **Computer Wins!**
 
 ### Cited
