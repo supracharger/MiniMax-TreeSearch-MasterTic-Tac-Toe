@@ -1,14 +1,14 @@
 # MiniMax TreeSearch Master Tic-Tac-Toe
 ## Player Cannot Win, the Computer Triumphs!!
-[Tic-Tac-Toe](img/main.jpg)
+![Tic-Tac-Toe](img/main.jpg)
 
-[Game Start](img/a.png)
+![Game Start](img/a.png)
 **You the Player plays as ‘X’, while the Computer plays as ‘O’.**
 
-[Block](img/block.png)
+![Block](img/block.png)
 **Computer Blocks Opponents Move!**
 
-[Win](img/win.png)
+![Win](img/win.png)
 **Computer Wins!**
 
 ### Cited
