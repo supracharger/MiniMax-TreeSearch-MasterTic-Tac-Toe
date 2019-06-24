@@ -1,5 +1,5 @@
-# MiniMax TreeSearch Master Tic-Tac-Toe
-## Player Cannot Win, the Computer Triumphs!!
+# C# MiniMax TreeSearch Master Tic-Tac-Toe
+## Player has a challenge to Win, the Computer does well in most cases!!
 ![Tic-Tac-Toe](img/main.jpg)
 
 ![Game Start](img/a.png)
