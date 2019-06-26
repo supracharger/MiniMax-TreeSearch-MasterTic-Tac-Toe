@@ -2,6 +2,8 @@
 ## Player Cannot Win, Computer Triumphs!!
 ![Tic-Tac-Toe](img/main.jpg)
 
+**Here is the Tic-Tac-Toe Master using a variant of MiniMax and Tree Search. This algorithm uses complex concepts with a minimal amount of code!**
+
 ![Game Start](img/a.png)
 
 **You the Player plays as ‘X’, while the Computer plays as ‘O’.**
