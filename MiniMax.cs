@@ -9,7 +9,8 @@ namespace TicTacToeConsole
     {
         // Transverse Tree to find optimal Solution
         // plrPole: from the reference of the computer
-        public static Board Eval(Board B, int plrPole)
+        // branch: Only used within Function. Tells what level in the Tree it is on.
+        public static Board Eval(Board B, int plrPole, int branch = 0)
         {
             // Get Future Boards
             // plrPole: is Correct. Value must be flipped from ref of computer to 
@@ -24,14 +25,16 @@ namespace TicTacToeConsole
                 return B;
             }
             // Transverse the Tree
-            boards.ForEach(bd => Eval(bd, plrPole * -1));
+            boards.ForEach(bd => Eval(bd, plrPole * -1, branch + 1));
             // -- MiniMax --
             // Min() is not used becuase performance was much better with out it. The reason this is true
             //      may be that TicTacToe has limited state space compared to other games that have a vast state space.
             // Maximize computers Score
             Board bOut = Max(boards);
             // Fitness Function to Propagate up the Tree & play Competitively
-            B._score = boards.Select(b => b._score).Average();
+            // Favors scores with a lower branch, & pentalizes scores with a higher Branch
+            // Max branch number is: 8
+            B._score = boards.Select(b => b._score * (10 - branch) / 10).Average();
             // Return Child Node
             return bOut;
         }

@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TicTacToeConsole;
 
-namespace TicTacToeConsole
+namespace TicTacToe
 {
     class Program
     {
@@ -8,6 +13,7 @@ namespace TicTacToeConsole
         {
             // Print Title of game & Create Board
             Title();
+            Console.WriteLine(" You are Player: 'X'");
             var B = new Board();
 
             // Continuous Loop
@@ -21,7 +27,7 @@ namespace TicTacToeConsole
                     int place = int.Parse(Console.ReadLine());                  // Get User Play Input
                     B.Play(place - 1, 1);                                       // Play & Add User Input to Game Board
                 }
-                catch { Console.WriteLine("Invalid Input!");     continue; }    // Error Catch Invalid Input
+                catch { Console.WriteLine("Invalid Input!"); continue; }        // Error Catch Invalid Input
                 if (EndGame(B, "X")) break;                                     // Check for GameOver or a Tie
 
                 // ............ Computers Turn ..............
@@ -41,7 +47,7 @@ namespace TicTacToeConsole
                 Console.WriteLine($"\n !!! WINNER '{symbol}' !!! \n --- GAME OVER  ---");
             // Check for a Tie
             else if (!B.isBoardPos())
-                Console.WriteLine("\n --- TIE --- \n --- GAME OVER  ---");
+                Console.WriteLine("\n --- TIE --- \n --- GAME OVER ---");
             // Game Continues
             else
                 return false;
