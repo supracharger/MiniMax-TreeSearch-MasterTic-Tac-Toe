@@ -1,0 +1,7 @@
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\obj\Debug\MiniMax2.csprojAssemblyReference.cache
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\obj\Debug\MiniMax2.csproj.CoreCompileInputs.cache
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\bin\Debug\MiniMax2.exe.config
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\bin\Debug\MiniMax2.exe
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\bin\Debug\MiniMax2.pdb
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\obj\Debug\MiniMax2.exe
+C:\Users\supra\Documents\GitHub\MiniMax-TreeSearch-MasterTic-Tac-Toe\VS\MiniMax2\MiniMax2\obj\Debug\MiniMax2.pdb

@@ -1,5 +1,5 @@
 ﻿# C# MiniMax TreeSearch Master Tic-Tac-Toe
-## Player Cannot Win, Computer Triumphs!!
+## Computer Challenges you in the Game!!
 ![Tic-Tac-Toe](img/main.jpg)
 
 **Here is the Tic-Tac-Toe Master using a variant of MiniMax and Tree Search. This algorithm uses complex concepts with a minimal amount of code!**
