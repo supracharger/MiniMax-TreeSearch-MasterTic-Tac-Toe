@@ -19,24 +19,21 @@ namespace TicTacToeConsole
             // If Leaf Node: Check for Win or Game Over
             if (B.CheckWin() || boards.Count == 0)
             {   // Get Score of Leaf Node
-                B._score = new Dictionary<int, double>
-                {
-                    {1, GetScore(B, 1, branch) },
-                    {-1, GetScore(B, -1, branch) }
-                };
+                B._score = GetScore(B, 1, branch) + GetScore(B, -1, branch) * 0.98;
                 return B;
             }
             // Transverse the Tree
             boards = boards.Select(bd => Eval(bd, plrPole * -1, branch + 1)).ToList();
-            // -- MiniMax --
-            // Keep on Defensive. Minimax is too complicated for Tic-Tac-Toe
-            Board bOut;
-            if (branch % 2 != 2)
-                bOut = Max(boards, plr:1);      // Defensive
-            else
-                bOut = Max(boards);             // Offensive
-            // Return Child Node
-            return bOut;
+            return Max(boards, branch);
+            //// -- MiniMax --
+            //// Keep on Defensive. Minimax is too complicated for Tic-Tac-Toe
+            //Board bOut;
+            //if (branch % 2 != 2)
+            //    bOut = Max(boards, branch, plr:1);      // Defensive
+            //else
+            //    bOut = Max(boards, branch);             // Offensive
+            //// Return Child Node
+            //return bOut;
         }
 
         // Get score for desired play 'O" or 'X'
@@ -60,8 +57,7 @@ namespace TicTacToeConsole
                 return (p == plr) ? 1 : -3; 
             };
             var scores = _possWin.Select(ar => PosRatio(B._board, ar)).ToList();
-            //var magnitude = (plr == -1) ? scores.Max() : scores.Min();
-            return (scores.Max() * 10 /*+ scores.Average()*/) / (branch + 1);
+            return scores.Max() / (branch + 1);
         }
 
         // Find Minimum Score over boards
@@ -70,19 +66,18 @@ namespace TicTacToeConsole
             Board bd = boards[0];
             // Find Minimum Score over boards   i=1
             for (int i = 1; i < boards.Count; i++)
-                if (boards[i]._score[1] < bd._score[1])
+                if (boards[i]._score < bd._score)
                     bd = boards[i];
             return bd;
         }
 
         // Find Maximum Score over boards
-        static Board Max(List<Board> boards, int plr = -1)
+        static Board Max(List<Board> boards, int branch)
         {
-            Board bd = boards[0];
-            // Find Maximum Score over boards   i=1
-            for (int i = 1; i < boards.Count; i++)
-                if (boards[i]._score[plr] > bd._score[plr])
-                    bd = boards[i];
+            // Get the board with the max score
+            var scores = boards.Select(b => b._score).ToList();
+            var scrii = scores.IndexOf(scores.Max());
+            var bd = boards[scrii];
             return bd;
         }
 

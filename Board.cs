@@ -8,7 +8,7 @@ namespace TicTacToeConsole
     class Board
     {
         public List<int> _board;                           // Game Board Represented by Ints
-        public Dictionary<int, double> _score;                       // Score from MiniMax
+        public double _score;                       // Score from MiniMax
         public int _lastPos { get; private set; }   // Last Position Idx
         // STATIC Possible Wins Index's
         static int[][] _winPattern = new int[8][]
